@@ -1,0 +1,22 @@
+<view>
+    <!-- 自定义导航栏 -->
+    <custom_nav left_icon='/images/leftarrow.png' right_icon="/images/home.png" bind:backtoLeft="_backtoLeft" bind:backtoRight="_backtoRight" title="{{title}}" title_color="#fff"></custom_nav>
+    <view class="bg" style="height:350rpx">
+        <view class="container">
+            <view class="title">{{detail.song}}</view>
+        </view>
+    </view>
+    <!-- 图片 -->
+    <view class="photo" bindtap="preview">
+    <image src="{{detail.photo}}"></image>
+    </view>
+    <!-- 底部 -->
+    <view class="icon">
+        <view class="zan" bindtap="shoucang">
+            <view><image src="{{selected?'/images/shoucang2.png':'/images/shoucang.png'}}"></image><text>收藏</text></view>
+        </view>
+        <view class="share">
+            <view><button class="share-btn" open-type="share"><image src="/images/share.png"></image><text>分享</text></button></view>
+        </view>
+    </view>
+</view>

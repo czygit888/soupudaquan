@@ -1,0 +1,37 @@
+<view class="container">
+    <view class="ava-container" bindtap="changeAvatar">
+        <view class="avatar">
+            <image src="{{avatar}}"></image>
+        </view>
+        <view>编辑头像</view>
+    </view>
+    <view class="name-container">
+        <view class="title">姓名</view>
+        <view><input type="text" value="{{nickname}}" bindblur="inputValue" /></view>
+    </view>
+    <view class="sex-container" bindtap="showPicker">
+        <view class="title">性别</view>
+        <view>
+            <view>{{sex[value]}}</view>
+            <view>
+                <image src='/images/rightarrow.png'></image>
+            </view>
+        </view>
+    </view>
+    <view class="quit" bindtap="quit"><view >退出登录</view></view>
+    <view class="unload" bindtap="unload">
+        <view class="{{btnDisabled?'disabled':''}}">保存</view>
+    </view>
+    <view class="pickSex {{show?'show':''}}">
+        <picker-view indicator-style="height: 50px;" style="width: 100%; height: 380rpx;" value="{{[value]}}" bindchange="bindChange" immediate-change="true">
+            <picker-view-column>
+                <view wx:for="{{sex}}" wx:key="index" style="line-height: 100rpx; text-align: center;">{{item}}</view>
+            </picker-view-column>
+        </picker-view>
+        <view class="btn">
+            <button type="default" bindtap="cancle">取消</button>
+            <button type="primary" bindtap="confirm">确定</button>
+        </view>
+    </view>
+    <view class="mask" style="display: {{show?'':'none'}};" bindtap="cancle"></view>
+</view>

@@ -1,0 +1,13 @@
+<view>
+    <custom_nav left_icon='/images/leftarrow.png' right_icon="/images/home.png" bind:backtoLeft="_backtoLeft" bind:backtoRight="_backtoRight"></custom_nav>
+    <view class="bg-img"></view>
+    <view class="content">
+        <view class="item" wx:for="{{list}}" bindtap="todetail" wx:key="index" data-id="{{item.id}}">
+            <view class="title">{{item.song}}</view>
+            <view class="img">
+                <image src="/images/music.png"></image>
+            </view>
+        </view>
+    </view>
+    <i-load-more tip="暂无数据" loading="{{ false }}" wx:if="{{notHave}}" />
+</view>

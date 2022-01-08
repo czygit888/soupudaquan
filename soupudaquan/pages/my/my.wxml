@@ -1,0 +1,48 @@
+<view>
+    <view class="bg" style="height: 560rpx;">
+        <view>
+            <view class="avatar">
+                <image src="{{avatar}}"></image>
+            </view>
+            <view class="nickname" bindtap="login">{{nickname}}</view>
+        </view>
+    </view>
+    <view class="content" >
+        <view bindtap="toShoucang">
+            <view class="icon">
+                <image src="/images/shoucang_my.png"></image>
+            </view>
+            <view class="shoucang">我的收藏</view>
+            <view class="arrow">
+                <image src="/images/rightarrow.png"></image>
+            </view>
+        </view>
+        <view bindtap="toMyjipu">
+            <view class="icon" >
+                <image src="/images/jipu.png"></image>
+            </view>
+            <view class="shoucang">我的记谱</view>
+            <view class="arrow">
+                <image src="/images/rightarrow.png"></image>
+            </view>
+        </view>
+        <view bindtap='toSet'>
+            <view class="icon">
+                <image src="/images/set.png"></image>
+            </view>
+            <view class="shoucang">我的设置</view>
+            <view class="arrow">
+                <image src="/images/rightarrow.png"></image>
+            </view>
+        </view>
+        <view >
+            <view class="icon">
+                <image src="/images/zaixiankefu.png"></image>
+            </view>
+            <view class="shoucang"  bindtap="toConcat">我的客服</view>
+            <view class="arrow">
+                <image src="/images/rightarrow.png"></image>
+            </view>
+        </view>
+    </view>
+</view>

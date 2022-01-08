@@ -1,0 +1,9 @@
+{
+  "navigationStyle":"default",
+  "navigationBarTitleText": "收藏",
+  "navigationBarTextStyle":"black",
+  "usingComponents": {
+    "i-swipeout": "../../dist/swipeout/index",
+    "i-cell": "../../dist/cell/index"
+  }
+}

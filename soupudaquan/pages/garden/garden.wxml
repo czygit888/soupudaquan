@@ -1,0 +1,34 @@
+<view class="bg-container">
+    <image src="/images/bizhi.jpg"></image>
+</view>
+<view class="add" bindtap="add">
+    <view style="margin-top: -18rpx;">+</view>
+</view>
+<view class="container">
+    <!-- 头部导航栏 -->
+    <view class="nav">
+        <view class="square {{selected==0?'selected':''}}" data-id='0' bindtap="change">广场</view>
+        <view class="my {{selected==1?'selected':''}}" data-id='1' bindtap="change">我的</view>
+    </view>
+    <!-- 记谱贴 -->
+    <scroll-view class="pu-container" scroll-y="true" bindscrolltolower="getMore">
+        <view class="pu-item" wx:for="{{comments}}" wx:key="index">
+            <view class="info">
+                <view class="avatar">
+                    <image src="{{item.avatar}}"></image>
+                </view>
+                <view class="nickName">{{item.nickName}}</view>
+            </view>
+            <view class="content">
+                <view class="text">{{item.comment}}</view>
+                <view class="imgs">
+                     <view class="photo" wx:for="{{item.imgs}}" wx:for-item="img" wx:for-index="i" wx:key="i"  bindtap="preview" data-photo="{{i}}" data-index="{{index}}">
+                            <image mode="aspectFill" src="{{img}}"></image>
+                        </view>
+                </view>
+               
+            </view>
+        </view>
+        <i-load-more tip="暂无数据"  i-class='my-load-more' loading="{{ false }}" wx:if="{{notHave}}" />
+    </scroll-view>
+</view>

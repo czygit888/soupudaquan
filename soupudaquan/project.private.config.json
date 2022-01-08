@@ -1,0 +1,30 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/kefu/kefu",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/xiaopu/xiaopu",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

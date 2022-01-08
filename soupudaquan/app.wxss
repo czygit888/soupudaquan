@@ -1,0 +1,8 @@
+/* 图标中间f4d32e */
+/* 字体边框eaa53f */
+/* top 788efd */
+.bg{
+    width:100%;
+    /* height:700rpx; */
+    background: linear-gradient(to bottom,#b4e0f8,#fff);
+  }

@@ -1,0 +1,49 @@
+.img_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding:20rpx;
+}
+.img_box>view{
+    margin-bottom: 20rpx;
+    margin-right:20rpx;
+    width:30%;
+    height: 280rpx;
+    position: relative;
+}
+.img_box>view image{
+    width:100%;
+    height:100%
+}
+.add{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f4f5;
+}
+.add_icon{
+    font-size: 40rpx;
+    font-weight: bold;
+}
+.text{
+    font-size: 32rpx;
+}
+.btn_submit{
+    margin-top: 50rpx;
+}
+.close{
+    width:40rpx;
+    height:40rpx;
+    border-radius: 50%;
+    background-color: red;
+    color:#fff;
+    position: absolute;
+    top:-20rpx;
+    right:-20rpx;
+    line-height: 1;
+    text-align: center;
+    font-size: 40rpx;
+}

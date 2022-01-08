@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="compute">共{{songs.length}}条</view>
+    <i-swipeout i-class="i-swipeout-demo-item" operateWidth="{{150}}" wx:for="{{songs}}" wx:key="index" >
+        <view slot="content" bindtap="todetail" data-id="{{item.id}}" data-index="{{index}}">
+            <i-cell i-class="i-cell-padding" title="{{item.song}}" label="右滑更多选项">
+            </i-cell>
+        </view>
+        <view slot="button" class="i-swipeout-demo-button-group">
+            <view class="i-swipeout-demo-button" >
+            <button open-type="share" class="btn-share" size="mini" style="background-color: transparent;color:#fff;font-size: 32rpx;"><view style="line-height: 184rpx;">分享</view></button></view>
+            <view class="i-swipeout-demo-button" data-id="{{index}}" bindtap="delete">删除</view>
+        </view>
+    </i-swipeout>
+    <i-load-more tip="暂无数据" loading="{{ false }}" wx:if="{{notHave}}" />
+    <view class="nothing" style="display: {{songs.length?'none':''}}">
+        <image src="/images/null.png"></image>
+    </view>
+</view>

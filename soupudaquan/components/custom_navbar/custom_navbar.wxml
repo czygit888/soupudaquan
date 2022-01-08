@@ -1,0 +1,14 @@
+    <!-- 返回首页胶囊 -->
+    <view  style="height:{{navigationBarHeight+statusBarHeight+'px'}};background-color: {{bg_color}};" class="nav_container" >
+        <view class='menubutton' style="height:{{menuButtonHeight+'px'}};line-height:{{menuButtonHeight+'px'}} ;width:{{menuButtonWidth+'px'}};top:{{top+'px'}};left:{{left+'px'}};background-color: rgba(0, 0, 0, 0.15);" >
+            <view  bindtap="_backtoLeft">
+                <image src="{{left_icon}}"></image>
+            </view>
+            <view style="color:rgba(124, 54, 54, 0.05)">|</view>
+            <view bindtap="_backtoRight">
+                <image src="{{right_icon}}" n></image>
+            </view>
+        </view>
+        <!-- 标题 -->
+        <view  style="top:{{top+'px'}};line-height:{{menuButtonHeight+'px'}};left:50%;transform:translateX(-50%) ;font-size: {{font_size}};color:{{title_color}}">{{title}}</view>
+    </view>

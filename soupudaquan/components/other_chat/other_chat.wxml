@@ -1,0 +1,7 @@
+<view class="container">
+    <view class="avatar" style="background-image: url({{avatar}});"></view>
+    <view class="msg">
+        <view class="text" wx:if="{{sendType==1}}">{{text}}</view>
+        <view class="img" wx:else><image mode="aspectFill" src="{{img}}"></image></view>
+    </view>
+</view>

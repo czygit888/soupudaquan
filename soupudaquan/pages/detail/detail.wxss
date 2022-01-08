@@ -1,0 +1,58 @@
+
+.container{
+    width: 80%;
+   position: absolute;
+   top:200rpx;
+   left:50%;
+   transform: translateX(-50%);
+   text-align: center;
+}
+.title{
+    font-size: 46rpx;
+    margin-bottom: 40rpx;
+}
+.icon{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left:0
+}
+.icon>view{
+    border-top:2rpx solid #e8e8e8 ;
+    line-height: 100rpx;
+    width: 50%;
+    color:#333;
+    background-color: #fff;
+}
+.icon>view+view{
+    border-left:2rpx solid #e8e8e8 ;
+}
+
+.share-btn{
+    background-color: #fff;
+    font-weight: normal;
+    color:#333;
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+    line-height: 100rpx;
+}
+.icon>view>view{
+    text-align: center;
+}
+.icon image{
+    width:60rpx;
+    height:60rpx;
+    vertical-align: middle;
+    margin-right:10rpx
+
+}
+.photo{
+    box-sizing: border-box;
+    padding-bottom: 100rpx;
+}
+.photo image{
+    width:100%;
+    height:1058rpx;
+}

@@ -1,0 +1,21 @@
+.container{
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+.input{
+    box-sizing: border-box;
+    padding: 30rpx;
+    width:100%;
+}
+.file{
+    width: 180rpx;
+    height: 250rpx;
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.file image{
+    width: 182rpx;
+    height: 240rpx;
+}

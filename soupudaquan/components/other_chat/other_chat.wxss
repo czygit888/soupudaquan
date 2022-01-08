@@ -1,0 +1,35 @@
+.container{
+    display: flex;
+    align-items: flex-start;
+    margin: 20rpx 0;
+
+}
+.avatar{
+    width: 100rpx;
+    height: 100rpx;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    border-radius: 50%;
+    background-position:center ;
+}
+.text{
+    max-width: 472rpx;
+    background-color: #fff;
+    margin-left:20rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    position: relative;
+    border-radius: 10rpx;
+    word-wrap:break-word
+}
+.text::before{
+    content:"";
+    position: absolute;
+    width:0;
+    height: 0;
+    border:20rpx solid transparent;
+    border-right:20rpx solid #fff;
+    top:20rpx;
+    left:-34rpx;
+
+}

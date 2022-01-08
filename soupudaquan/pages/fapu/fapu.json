@@ -1,0 +1,8 @@
+{
+    "navigationStyle":"default",
+  "navigationBarTitleText": "记谱",
+  "navigationBarTextStyle":"black",
+    "usingComponents": {
+      "uploadimgs":"/components/uploadimgs/uploadimgs"
+    }
+  }

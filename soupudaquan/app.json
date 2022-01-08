@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/garden/garden",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/detail/detail",
+    "pages/set/set",
+    "pages/shoucang/shoucang",
+    "pages/fapu/fapu",
+    "pages/myjipu/myjipu",
+    "pages/search/search",
+    "pages/kefu/kefu",
+    "pages/xiaopu/xiaopu"
+
+  ],
+  "window":{
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "搜谱大全",
+    "navigationBarTextStyle":"white",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#eaa53f",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index_di.png",
+        "selectedIconPath": "/images/index.png"
+      },
+      {
+        "pagePath": "pages/garden/garden",
+        "text": "记谱园地",
+        "iconPath": "/images/garden_di.png",
+        "selectedIconPath": "/images/garden.png"
+      },
+      {
+        "pagePath":"pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/my_di.png",
+        "selectedIconPath": "/images/my.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

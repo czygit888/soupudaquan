@@ -1,0 +1,8 @@
+{
+  "navigationStyle":"default",
+  "navigationBarTitleText": "收藏",
+  "navigationBarTextStyle":"black",
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index"
+  }
+}

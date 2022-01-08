@@ -1,0 +1,48 @@
+<view class="bg-container">
+    <image src="/images/bizhi.jpg"></image>
+</view>
+<view class="container">
+    <view class="caozuo">
+        <view class="compute">共{{comments.length}}条</view>
+        <view bindtap="guanli">
+            <view class="guanli" wx:if="{{!guanli}}">管理</view>
+            <view class="guanli" wx:else="{{guanli}}">
+                完成
+            </view>
+        </view>
+    </view>
+    <view>
+        <scroll-view class="pu-container" scroll-y="true" bindscrolltolower="getMore">
+            <view class="pu-item" wx:for="{{comments}}" wx:key="index">
+                <!-- 复选按钮 -->
+                <view class="select {{item.select?'selected':''}} " wx:if="{{guanli}}" data-id="{{index}}" bindtap="select"></view>
+                <!-- 发普信息 -->
+                <view class="{{guanli?'guanlicomment':'comment'}}">
+                    <view class="info">
+                        <view class="avatar">
+                            <image src="{{item.avatar}}"></image>
+                        </view>
+                        <view class="nickName">{{item.nickName}}</view>
+                    </view>
+                    <view class="content">
+                        <view class="text">{{item.comment}}</view>
+                        <view class="imgs">
+                            <view class="photo" wx:for="{{item.imgs}}" wx:for-item="img" wx:for-index="i" wx:key="i" bindtap="preview" data-photo="{{i}}" data-index="{{index}}">
+                                <image mode="aspectFill" src="{{img}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <i-load-more tip="暂无数据" i-class='my-load-more' loading="{{ false }}" wx:if="{{notHave}}" />
+        </scroll-view>
+    </view>
+    <view class="btn" wx:if="{{guanli}}">
+        <view class="btn-quanxuan" bindtap="selectAll">
+            <view class="quanxuan {{select_all?'selected':''}}"></view>
+            <view class="btn-all">{{select_all?'取消全选':'全选'}}</view>
+        </view>
+        <view class="total">共选中了{{selList.length}}条</view>
+        <view class="btn-del" bindtap="del">删除</view>
+    </view>
+</view>

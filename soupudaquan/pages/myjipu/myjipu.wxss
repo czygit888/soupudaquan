@@ -1,0 +1,159 @@
+.bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+.container{
+    height: 100vh;
+}
+.bg-container>image {
+    width: 100%;
+    height: 100%
+}
+.caozuo{
+    position: fixed;
+    top:0;left:0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20rpx 40rpx;
+    font-size: 26rpx;
+    color: #888;
+    background-color: #F6F6F6;
+    display: flex;
+    justify-content: space-between;
+}
+.pu-container {
+    position: fixed;
+    top:0;left:0;
+    height:100vh;
+    width:100%;
+    margin-top: 79rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+    overflow: hidden;
+    padding-bottom:140rpx ;
+}
+.pu-item{
+    margin-bottom: 20rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.select,.quanxuan{
+    width:30rpx;
+    height:30rpx;
+    border-radius: 50%;
+    border:4rpx solid #F6F6F6
+}
+/* 被选中的样式 */
+.select.selected,.quanxuan.selected{
+    /* border:0; */
+    background-color: #fa3534;
+}
+.comment{
+    width:90%
+}
+.btn{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+}
+.btn-quanxuan{
+    width:35%;
+    display: flex;
+    align-items: center;
+}
+.total,.btn-del,.btn-quanxuan{
+    box-sizing: border-box;
+    padding: 30rpx;
+}
+.total{
+    width: 50%;
+    text-align: right;
+}
+
+.btn-del{
+    text-align: center;
+    width: 20%;
+    background-color: #fa3534;
+    color:#fff;
+}
+.info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar {
+    width: 10%;
+}
+
+.avatar image {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.nickName {
+    width: 85%
+}
+.content {
+    background-color: rgba(255, 255, 255, .6);
+    box-sizing: border-box;
+    padding: 20rpx;
+    width: 100%;
+    border-radius: 10rpx;
+}
+.guanli{
+    display: flex;
+}
+.text {
+    box-sizing: border-box;
+    padding:0 20rpx;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    /*设置p元素最大4行，父元素需填写宽度才明显*/
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.photo {
+    box-sizing: border-box;
+    /* padding: 20rpx; marma*/
+    margin-left:20rpx;
+    margin-bottom:20rpx;
+
+
+}
+
+.photo image {
+    width: 183rpx;
+    height: 240rpx;
+}
+.my-load-more .i-load-more-tip{
+    color: #eee !important;
+}
+.imgs{
+    display:flex;
+    flex-wrap:wrap;
+}
+.comment{
+    width: 100%;
+}
+.guanlicomment{
+    width: 85%;
+}

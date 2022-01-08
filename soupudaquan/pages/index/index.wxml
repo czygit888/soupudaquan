@@ -1,0 +1,39 @@
+<view class="container">
+    <view class="bg">
+        <view class="swiper-container {{animated?'animated':''}}">
+            <swiper class='swiper' previous-margin="130rpx" next-margin="130rpx" autoplay="true" circular="true" current="{{current}}" bindchange="changeCurrent">
+                <swiper-item wx:for="{{lunboUrl}}" wx:key="index">
+                    <view data-class="zhuanji" data-id="{{item.id}}" bindtap="toList">
+                        <image src="{{item.photo}}" class="{{current==item.id?'active':'quiet'}}"></image>
+                        <view style="margin-top: 10rpx;">{{item.name}}</view>
+                    </view>
+                </swiper-item>
+            </swiper>
+        </view>
+    </view>
+    <view class="content">
+        <view class="search-container {{animated?'animated':''}}" bindtap="toSearch">
+            <swiper vertical="true" autoplay="true" class="search" circular="true" current="1">
+                <swiper-item wx:for="{{lunboUrl}}" wx:key="index">
+                    <view >{{item.name}}</view>
+                </swiper-item>
+            </swiper>
+            <view class="search-icon">
+                <image src="/images/search.png"></image>
+            </view>
+        </view>
+        <view class="card">
+            <view class="card-item bg{{item.id}} {{animated?'animated':''}}" wx:for="{{category}}" wx:key="index" bindtap="toList" data-id="{{item.id}}" data-class="category">
+                <view class="t">
+                    <view class="title">{{item.category}}</view>
+                    <view class="icon">
+                        <image src="/images/box{{item.id}}.png"></image>
+                    </view>
+                </view>
+                <view class="b">
+                    <view>{{item.english}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

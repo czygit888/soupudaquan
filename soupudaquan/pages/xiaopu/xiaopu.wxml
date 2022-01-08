@@ -1,0 +1,19 @@
+<view class="container">
+    <!-- 中间对话框 -->
+    <view>
+        <scroll-view class="scroll" scroll-y="true" scroll-top="{{top}}">
+            <view class="chat-container">
+                <view class="chat-item" wx:for="{{messages}}" wx:key="index">
+                    <other_chat wx:if="{{!item.isMe}}" sendType="{{item.sendType}}" text="{{item.msg}}" img="{{item.msg}}"></other_chat>
+                    <self_chat wx:else sendType="{{item.sendType}}" text="{{item.msg}}" img="{{item.msg}}"></self_chat>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 底部输入框 -->
+    <view class="input-container">
+        <textarea value="{{value}}" show-confirm-bar="{{false}}" class="text" cursor-spacing="40" bindinput="inputText" 	maxlength="500"></textarea>
+        <view class="addimg" wx:if="{{!value}}" bindtap="sendImg"><view>+</view></view>
+        <view class="send" wx:else bindtap="sendText">发送</view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "custom_nav":"../../components/custom_navbar/custom_navbar",
+    "i-load-more": "../../dist/load-more/index"
+  }
+}

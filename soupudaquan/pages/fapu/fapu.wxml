@@ -1,0 +1,8 @@
+<view class="container">
+    <form bindsubmit="fabiao">
+        <view class="input">
+            <textarea maxlength='500' style="height:200rpx" show-confirm-bar="true" type="text" placeholder="记下您所感兴趣的谱子与他人一起分享吧~" value="{{content}}" bindinput="bindText" />
+        </view>
+        <uploadimgs  count="{{countPic}}" action="{{action}}" bind:customEventHandler="upload"></uploadimgs>
+    </form>
+</view>

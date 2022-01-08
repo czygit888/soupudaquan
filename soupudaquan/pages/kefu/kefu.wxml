@@ -1,0 +1,13 @@
+<view class="container">
+    <scroll-view scroll-y="true" scroll-top="{{top}}" class="scroll">
+        <view class="scroll-container">
+        <view wx:for="{{messages}}" wx:key="index">
+            <chat_self wx:if="{{item.isMy}}" msg="{{item.msg}}" img="{{item.img}}" type="{{item.type}}"></chat_self>
+            <chat wx:else msg="{{item.msg}}" img="{{item.img}}" type="{{item.type}}"></chat>
+        </view>
+    </view>
+    </scroll-view>
+    <view class="input-container"><textarea type="text" value="{{msg}}" class="input" show-confirm-bar="{{false}}" cursor-spacing='25' bindinput="input"></textarea><button wx:if="{{msg.length}}" class="btn" style="margin:0" type="primary" size="mini" bindtap="handleSend">发送</button>
+        <view class="addimg" wx:else bindtap="addImg">+</view>
+    </view>
+</view>

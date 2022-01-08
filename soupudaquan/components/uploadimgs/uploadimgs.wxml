@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="img_box">
+        <view class="img_item" wx:for="{{imgList}}" wx:key="index" data-id="{{index}}" bindtap="prev">
+            <image src="{{item}}" mode="aspectFill"></image>
+            <view class="close" bindtap="close" data-index="{{index}}">×</view>
+        </view>
+        <view class="add" bindtap="addImg" wx:if="{{imgList.length<9}}">
+            <view class="add_icon">+</view>
+            <view class="text">选择图片</view>
+        </view>
+    </view>
+    <button class="btn_submit" type="primary" size="default" bindtap="upload">上传</button>
+</view>

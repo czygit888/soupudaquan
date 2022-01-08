@@ -1,0 +1,9 @@
+{
+  "navigationStyle":"default",
+  "navigationBarTitleText": "我的小谱",
+  "navigationBarTextStyle":"black",
+  "usingComponents": {
+    "chat":"/components/chat/chat",
+    "chat_self":"/components/chat_self/chat_self"
+  }
+}
